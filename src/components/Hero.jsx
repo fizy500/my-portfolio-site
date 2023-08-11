@@ -33,8 +33,8 @@ function Hero() {
   }, [inView]);
 
   return (
-    <section className=' bg-gray-900 lg:grid grid-cols-3 justify-between items-center px-8 py-[7rem] '>
-      <div className='space-y-20' ref={ref}>
+    <section className=' bg-gray-900 lg:grid grid-cols-3 justify-between items-center px-8 py-[15rem] '>
+      <div className='lg:space-y-40 space-y-10' ref={ref}>
         <h1 className='text-4xl text-white font-bold'>
           <span className='text-7xl font-extralight'>O</span>
           tuekong <span className='te text-7xl font-extralight'>I</span>
@@ -48,16 +48,16 @@ function Hero() {
           Contact me
         </button>
       </div>
-      <motion.div animate={animationDot} ref={ref} className=''>
-        <p className='text-[8rem] font-extrabold text-purple-400'>
+      <motion.div animate={animationDot} ref={ref} className=' '>
+        <p className='text-[8rem] font-extrabold text-purple-400 py-20'>
           &#123; &#124; &#125;
         </p>
       </motion.div>
-      <div className='space-y-8'>
+      <div className='space-y-8 self-end sm:mt-10'>
         <h2 className='text-4xl text-white  font-semibold'>
-          Frontend Web Developer
+          Frontend Developer
         </h2>
-        <p className="w-[70%] pr-4 text-slate-300  text-2xl lg:before:content-['//']  lg:after:content-['//'] flex">
+        <p className="lg:w-[70%] pr-4 text-slate-300  text-2xl lg:before:content-['//']  lg:after:content-['//'] flex">
           Technical writer and sometimes messes around with new tech.
         </p>
       </div>

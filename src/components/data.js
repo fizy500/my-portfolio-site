@@ -1,7 +1,7 @@
-import HtmlLogo from "../assets/htmlLogo.svg";
-import CssLogo from "../assets/cssLogo.svg";
-import JavascriptLogo from "../assets/javascriptLogo.svg";
-import ReactLogo from "../assets/reactLogo.svg";
+import HtmlLogo from "../assets/article.jpg";
+import CssLogo from "../assets/article.jpg";
+import JavascriptLogo from "../assets/article.jpg";
+import ReactLogo from "../assets/article.jpg";
 
 export const logos = [
   {

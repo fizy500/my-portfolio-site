@@ -1,27 +1,21 @@
-// import { useState } from "react";
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-// import Home from "./components/Home";
-import Hero from "./components/Hero";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Articles from "./components/Articles";
-import Project from "./components/Project";
+import Home from "./components/Home";
+import Resume from "./components/Resume";
+import Skills from "./components/Skills";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <Hero />
-      {/* <Home /> */}
-      <Skills />
-      <Articles />
-      <Project />
-      <Contact />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='resume' element={<Resume />} />
+        <Route path='skills' element={<Skills />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 

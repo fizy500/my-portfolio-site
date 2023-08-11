@@ -1,30 +1,26 @@
-/* eslint-disable react/jsx-key */
-// import SkillsCards from "./SkillsCards";
-import { logos } from "./data";
+import { Link } from "react-router-dom";
+import CssLogo from "../assets/cssLogo.svg";
+import HtmlLogo from "../assets/htmlLogo.svg";
+import JavascriptLogo from "../assets/javascriptLogo.svg";
+import ReactLogo from "../assets/reactLogo.svg";
 
-function Skills() {
+export default function Skills() {
   return (
-    <section className=' bg-gray-950 h-1/2 px-8 py-20'>
-      <h2 className='text-center text-2xl text-white font-bold py-4 '>
-        Tools I use
-      </h2>
-      <div className='grid lg:grid-cols-4 gap-10  items-center  py-8'>
-        {logos.map((logo) => {
-          return (
-            <div
-              className='bg-gray-900 rounded-sm flex flex-col justify-center items-center space-y-3 text-center  h-fit py-8'
-              key={logo.id}
-            >
-              <img src={logo.image} alt={logo.name} width='50px' />
-              <p className='text-white px-8'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-            </div>
-          );
-        })}
+    <section className='flex justify-center items-center'>
+      <div className='  bg-gray-700 h h-[40rem] w-[40rem]  rounded-[50%]  relative'>
+        <div className='absolute top-1/2 right-1/2'>
+          <img src={HtmlLogo} alt='' />
+        </div>
+        <div className='absolute top-40 right-1/3 '>
+          <img src={CssLogo} alt='' />
+        </div>
+        <div className='absolute bottom-[20rem] '>
+          <img src={JavascriptLogo} alt='' />
+        </div>
+        <div className='absolute'>
+          <img src={ReactLogo} alt='' width='20' />
+        </div>
       </div>
     </section>
   );
 }
-
-export default Skills;

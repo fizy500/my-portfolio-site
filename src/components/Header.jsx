@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,24 +21,18 @@ function Header() {
           <div className='hidden md:block'>
             <div className='ml-10 flex items-baseline space-x-4'>
               <a
-                to='/'
-                className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
-              >
-                Home
-              </a>
-              <a
                 to='/about'
                 className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
               >
                 About
               </a>
 
-              <a
-                to='/about'
+              <Link
+                to='skills'
                 className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
               >
-                Portfolio
-              </a>
+                Skills
+              </Link>
               <a
                 to='/about'
                 className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
@@ -46,12 +40,12 @@ function Header() {
                 Contact
               </a>
 
-              <a
-                to='/about'
+              <Link
+                to='/resume'
                 className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
               >
                 Resume
-              </a>
+              </Link>
               {/* Add more menu items here */}
             </div>
           </div>
