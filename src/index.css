@@ -1,15 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* @layer components {
-  .tabs {
-    @apply;
+body {
+  margin: 0;
+  font-family: "Poppins" sans-serif;
+  -webkit-font-smoothing: antialiase;
+  -moz-osx-font-smoothing: grayscale;
+}
+img {
+  max-width: 100%;
+}
+
+
+
+@layer components {
+  .max-width {
+    @apply px-5 lg:max-w-5xl lg:mx-auto xl:max-w-6xl 2xl:px-0;
   }
-  .active {
-    @apply;
+  .nav {
+    @apply text-gray-300 before:content-["."] before:text-5xl before:font-extrabold before:text-gray-400 flex flex-col hover:text-white px-3 py-2 rounded-md  text-lg font-medium transition  duration-[2000ms];
   }
-} */
+  .navActive {
+    @apply text-gray-300 before:content-["."] before:text-5xl before:font-extrabold before:text-purple-400 flex flex-col hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-[2000ms];
+  }
+}
 
 .arrow {
   width: 0;
@@ -17,13 +34,6 @@
   border-top: 40px solid transparent;
   border-bottom: 40px solid transparent;
   border-left: 70px solid rgba(192, 132, 252, 1);
-}
-.arrow2 {
-  width: 0;
-  height: 0;
-  border-top: 40px solid transparent;
-  border-bottom: 40px solid transparent;
-  border-right: 70px solid rgba(192, 132, 252, 1);
 }
 
 .articles-grid {
@@ -40,10 +50,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
-  background: #fff;
 }
 
 .container {
@@ -78,7 +84,7 @@ body {
 
 .active-tabs {
   /* background: white; */
-  
+
   border-bottom: 1px solid transparent;
 }
 
@@ -94,9 +100,9 @@ body {
   background: rgb(192 132 252);
 }
 
-button {
+/* button {
   border: none;
-}
+} */
 .content-tabs {
   flex-grow: 1;
 }

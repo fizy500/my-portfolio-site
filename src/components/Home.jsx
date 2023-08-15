@@ -1,13 +1,16 @@
+import Footer from "./Footer";
 import Hero from "./Hero";
-import Articles from "./Articles";
-import Contact from "./Contact";
+import Portfolio from "./Portfolio";
+import ThankYou from "./ThankYou";
+
+
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Articles />
-      <Contact />
+      <Portfolio />
+      <Footer />
     </>
   );
 }

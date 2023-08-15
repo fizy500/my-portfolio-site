@@ -7,7 +7,7 @@ export function ModalArticleContent() {
         Getting ahead in devops
       </h2>
       <a href='https:twitter.com' target='_blank' rel='noopener noreferrer'>
-        <img src={ArticlePic} alt='' className='rounded-sm' />
+        <img src={ArticlePic} alt='' className='rounded-sm' width='600' />
       </a>
     </>
   );

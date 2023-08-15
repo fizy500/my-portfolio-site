@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,11 +8,11 @@ function Header() {
   };
 
   return (
-    <nav className=' bg-gray-900  md:bg-gray-900 w-full fixed z-50 py-6'>
+    <nav className=' bg-gray-900  md:bg-gray-900 w-full fixed z-50 py-3 top-0'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-16'>
           <div className='flex items-center '>
-            <a to='/' className='text-white text-xl font-bold'>
+            <a to='/' className='text-white text-xl font-bold pb-3'>
               <p className='text-4xl text-white font-bold'>
                 OA<span className='text-8xl'>.</span>
               </p>
@@ -20,32 +20,18 @@ function Header() {
           </div>
           <div className='hidden md:block'>
             <div className='ml-10 flex items-baseline space-x-4'>
-              <a
-                to='/about'
-                className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+              <NavLink
+                to='/'
+                className={({ isActive }) => (isActive ? "navActive" : "nav")}
               >
-                About
-              </a>
-
-              <Link
-                to='skills'
-                className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
-              >
-                Skills
-              </Link>
-              <a
-                to='/about'
-                className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                Home
+              </NavLink>
+              <NavLink
+                to='contact'
+                className={({ isActive }) => (isActive ? "navActive" : "nav")}
               >
                 Contact
-              </a>
-
-              <Link
-                to='/resume'
-                className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
-              >
-                Resume
-              </Link>
+              </NavLink>
               {/* Add more menu items here */}
             </div>
           </div>

@@ -10,7 +10,7 @@ import {
 
 import { ModalArticleContent } from "./ModalArticleContent";
 
-function Articles() {
+function Portfolio() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -28,7 +28,7 @@ function Articles() {
   };
 
   return (
-    <section className=' bg-gray-950  px-8 py-16'>
+    <section className=' bg-gray-950  px-8 py-16 '>
       <div className='lg:flex  items-center'>
         <motion.div
           className='w-1/2 flex items-center'
@@ -43,7 +43,7 @@ function Articles() {
               aria-hidden='true'
               className='bg-gray-900 w-[20px] h-[20px] rounded-[50%] mr-2'
             />
-            <span>My Articles</span>
+            <span>Portfolio</span>
             <div
               aria-hidden='true'
               className='bg-gray-900 w-[20px] h-[20px] rounded-[50%] ml-2'
@@ -51,17 +51,17 @@ function Articles() {
           </div>
           <div className='arrow hidden lg:block' />
         </motion.div>
-        <div className='lg:w-1/2 '>
+        <div className='lg:w-1/2  '>
           <div className=''>
             <nav className='border border-dotted border-purple-400 py-10 text text-white w-full rounded-sm  min-h-[700px]'>
-              
-
               <div className='bloc-tabs'>
                 <button
-                  className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
+                  className={`${
+                    toggleState === 1 ? "tabs active-tabs" : "tabs"
+                  }  transition duration-1000`}
                   onClick={() => toggleTab(1)}
                 >
-                  Articles
+                  Portfolio
                 </button>
                 <button
                   className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
@@ -71,14 +71,15 @@ function Articles() {
                 </button>
               </div>
 
-              <div className='cursor-pointer px-2 h-f overflow-autob'>
+              <div className='cursor-pointer px-2'>
                 <div className='content-tabs'>
                   <div
                     className={
                       toggleState === 1 ? "content  active-content" : "content"
                     }
                   >
-                    <div onClick={openModal}>
+                    <div className="h-[42rem] overflow-y-auto" onClick={openModal}>
+                      <ArticlesTemplate />
                       <ArticlesTemplate />
                     </div>
                   </div>
@@ -87,7 +88,11 @@ function Articles() {
                       toggleState === 2 ? "content  active-content" : "content"
                     }
                   >
-                    <div onClick={openModal}>
+                    <div className='space-y-8 py-4 h-[42rem] overflow-y-scroll'>
+                      <ProjectsTemplate />
+                      <ProjectsTemplate />
+                      <ProjectsTemplate />
+                      <ProjectsTemplate />
                       <ProjectsTemplate />
                     </div>
                   </div>
@@ -104,4 +109,4 @@ function Articles() {
     </section>
   );
 }
-export default Articles;
+export default Portfolio;
