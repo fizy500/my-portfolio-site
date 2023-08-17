@@ -14,17 +14,42 @@ img {
   max-width: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(142, 107, 179);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 @layer components {
   .max-width {
     @apply px-5 lg:max-w-5xl lg:mx-auto xl:max-w-6xl 2xl:px-0;
   }
   .nav {
-    @apply text-gray-300 before:content-["."] before:text-5xl before:font-extrabold before:text-gray-400 flex flex-col hover:text-white px-3 py-2 rounded-md  text-lg font-medium transition  duration-[2000ms];
+    @apply before:content-["."] before:text-5xl before:font-extrabold before:text-gray-400 flex flex-col hover:text-white px-3 py-2 rounded-md  text-sm font-medium transition  duration-[2000ms];
+  }
+
+  .navDesktop {
+    @apply text-gray-300;
+  }
+  .navMobile {
+    @apply text-gray-950 text-2xl;
   }
   .navActive {
-    @apply text-gray-300 before:content-["."] before:text-5xl before:font-extrabold before:text-purple-400 flex flex-col hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-[2000ms];
+    @apply text-gray-300 before:content-["."] before:text-5xl before:font-extrabold before:text-purple-400 flex flex-col hover:text-white px-3 py-2 rounded-md text-lg font-medium transition duration-[2000ms];
   }
 }
 

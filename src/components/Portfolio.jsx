@@ -28,8 +28,8 @@ function Portfolio() {
   };
 
   return (
-    <section className=' bg-gray-950  px-8 py-16 '>
-      <div className='lg:flex  items-center'>
+    <section className=' bg-gray-950 py-16 '>
+      <div className='lg:flex  items-center max-width'>
         <motion.div
           className='w-1/2 flex items-center'
           whileHover={{
@@ -78,7 +78,7 @@ function Portfolio() {
                       toggleState === 1 ? "content  active-content" : "content"
                     }
                   >
-                    <div className="h-[42rem] overflow-y-auto" onClick={openModal}>
+                    <div className="h-[42rem] overflow-y-auto px-3" onClick={openModal}>
                       <ArticlesTemplate />
                       <ArticlesTemplate />
                     </div>
@@ -88,7 +88,7 @@ function Portfolio() {
                       toggleState === 2 ? "content  active-content" : "content"
                     }
                   >
-                    <div className='space-y-8 py-4 h-[42rem] overflow-y-scroll'>
+                    <div className='space-y-10 py-4  px-3 h-[42rem] overflow-y-scroll'>
                       <ProjectsTemplate />
                       <ProjectsTemplate />
                       <ProjectsTemplate />
