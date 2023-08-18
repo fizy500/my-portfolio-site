@@ -3,11 +3,16 @@ import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 import HomeLink from "./HomeLink";
 import ThankYou from "./ThankYou";
+import { SenderContext } from "../App";
+
 const emailText = "otuekongarthur@gmail.com";
 
-export default function Contact() {
+export default function Contact(handleStateChange) {
+  const sendTextToParent = () => {
+    handleStateChange()
+  };
+
   const [copyImage, SetCopyImage] = useState(false);
-  const [sender, setSender] = useState("");
   const navigate = useNavigate();
   const form = useRef();
   const sendEmail = (e) => {
@@ -15,10 +20,10 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_0fj98yq",
-        "template_iaqpm6n",
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         form.current,
-        "bu_Z5TVLIBkU8Y_X7"
+        import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
         () => {
@@ -55,7 +60,7 @@ export default function Contact() {
                 name='user_name'
                 placeholder='name'
                 className='rounded-sm px-2 py-3 border border-gray-400 outline-1 outline-gray-500'
-                onClick={(e) => setSender(e.target.value)}
+                onClick={(e) => sendTextToParent(e.target.value)}
               />
 
               <input
@@ -138,8 +143,9 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className='flex items-center space-x-3'>
+                  {/* Twitter */}
                   <a
-                    href='#'
+                    href='https://twitter.com/Fizy_hector'
                     className='border border-dotted  border-purple-400 rounded-sm flex justify-center items-center p-2 '
                   >
                     <svg
@@ -153,7 +159,8 @@ export default function Contact() {
                     </svg>
                   </a>
                   <a
-                    href='#'
+                    // Linked In
+                    href='https://www.linkedin.com/in/otuekong-idongesit-bb1122225/'
                     className='border border-dotted  border-purple-400 rounded-sm flex justify-center items-center p-2 '
                   >
                     <svg
@@ -167,7 +174,8 @@ export default function Contact() {
                     </svg>
                   </a>
                   <a
-                    href='#'
+                    // Github
+                    href='https://github.com/fizy500'
                     className='border border-dotted  border-purple-400 rounded-sm flex justify-center items-center p-2 '
                   >
                     <svg
@@ -185,10 +193,6 @@ export default function Contact() {
               </div>
               <HomeLink position={"bottom-[93%] left-[90%]"} />
             </div>
-            <div className="hidden">
-            <ThankYou sender={sender}/>
-            </div>
-          
           </div>
         </div>
       </div>

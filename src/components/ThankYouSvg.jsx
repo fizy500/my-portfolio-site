@@ -1,13 +1,27 @@
+import { motion } from "framer-motion";
+
+const pathVariant = {
+  hidden: {
+    opacity: 0,
+    pathLenth: 0,
+  },
+  visible: {
+    opacity: 1,
+    pathLenth: 0,
+    transition: { duration: 2, ease: "easInOut" },
+  },
+};
+
 export default function ThankYouSvg() {
   return (
-    <svg
+    <motion.svg
       version='1.0'
-      xmlns='http://www.w3.org/2000/svg'
+      xmlns='http://www.w3.org/2000/motion.svg'
       width='700'
       // height='800'
       viewBox='0 0 1280.000000 1280.000000'
       preserveAspectRatio='xMidYMid meet'
-      className=' fill-purple-400   h-[40rem]  '
+      className=' fill-purple-400   h-[40rem] '
     >
       <metadata>
         Created by potrace 1.15, written by Peter Selinger 2001-2017
@@ -18,7 +32,7 @@ export default function ThankYouSvg() {
         fill=''
         stroke='none'
       >
-        <path
+        <motion.path
           d='M10515 9845 c-59 -30 -113 -55 -119 -55 -7 0 -47 -22 -89 -49 -89
     -56 -99 -60 -221 -90 -170 -40 -266 -107 -266 -185 0 -17 11 -67 25 -111 37
     -114 79 -333 124 -648 74 -508 90 -665 121 -1171 l19 -329 57 -170 c39 -117
@@ -27,8 +41,9 @@ export default function ThankYouSvg() {
     104 11 331 192 229 182 270 222 270 264 0 45 -99 343 -122 368 -11 12 -89 70
     -173 130 l-153 108 41 11 c133 35 154 74 207 390 107 631 153 1234 130 1712
     -16 343 -46 566 -103 767 -55 194 -55 195 -124 195 -31 0 -69 -14 -148 -55z'
+          variants={pathVariant}
         />
-        <path
+        <motion.path
           d='M8057 9400 c-35 -11 -112 -69 -193 -147 -45 -43 -65 -71 -77 -108
     -28 -84 -92 -744 -105 -1085 l-8 -205 -69 -140 -69 -140 -7 100 c-6 95 -10
     109 -79 274 -78 183 -106 224 -161 235 -62 12 -164 -31 -226 -96 -41 -43 -127
@@ -87,8 +102,9 @@ export default function ThankYouSvg() {
     20 32 29 38 36 28 6 -10 -2 -24 -23 -46z m-148 -1525 c27 -50 70 -108 109
     -147 l64 -64 -25 -51 c-33 -65 -98 -140 -151 -171 -52 -30 -131 -48 -170 -39
     l-29 6 4 107 c4 87 11 125 41 213 37 109 91 228 105 228 4 0 27 -37 52 -82z'
+          variants={pathVariant}
         />
       </g>
-    </svg>
+    </motion.svg>
   );
 }

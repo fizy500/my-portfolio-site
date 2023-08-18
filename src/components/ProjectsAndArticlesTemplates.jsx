@@ -4,18 +4,18 @@ export function ArticlesTemplate() {
   return (
     <div>
       {logos.map((logo) => {
-        const {id,image,name} = logo
+        const { id, image, name } = logo;
         return (
           <div
             className='rounded-sm flex flex-col space-x-4 lg:flex-row items-center h-fit border border-dotted border-purple-100 mb-4 py-5 px-2 lg:px-6 '
             key={id}
           >
             <img src={image} alt={name} width='150px' />
-            <div className="flex flex-col">
+            <div className='flex flex-col'>
               <h2>Gettin ahead in devops</h2>
-              <p className='text-white text-ellipsis overflow-hidden whitespace-nowrap w-full'>
+              <p className='text-white text-ellipsis leading-4 tracking-wide line-clamp-4'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum.
+                ipsum dolor sit amet consectetur.
               </p>
             </div>
           </div>

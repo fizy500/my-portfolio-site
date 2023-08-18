@@ -22,13 +22,17 @@ function Header() {
             <div className='ml-10 flex items-baseline space-x-4'>
               <NavLink
                 to='/'
-                className={({ isActive }) => (isActive ? "navActive" : "nav navDesktop")}
+                className={({ isActive }) =>
+                  isActive ? "navActive" : "nav navDesktop"
+                }
               >
                 Home
               </NavLink>
               <NavLink
                 to='contact'
-                className={({ isActive }) => (isActive ? "navActive" : "nav navDesktop")}
+                className={({ isActive }) =>
+                  isActive ? "navActive" : "nav navDesktop"
+                }
               >
                 Contact
               </NavLink>
@@ -86,7 +90,7 @@ function Header() {
           <button
             onClick={toggleMenu}
             type='button'
-            className=' inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white mb-5'
+            className=' inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-white mb-5'
             aria-controls='mobile-menu'
             aria-expanded='false'
           >
@@ -123,17 +127,19 @@ function Header() {
             </svg>
           </button>
           <NavLink
-                to='/'
-                className={({ isActive }) => (isActive ? "navActive" : "nav")}
-              >
-                Home
-              </NavLink>
-              <NavLink
-                to='contact'
-                className={({ isActive }) => (isActive ? "navActive" : "nav navMobile")}
-              >
-                Contact
-              </NavLink>
+            to='/'
+            className={({ isActive }) => (isActive ? "navActive" : "nav")}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to='contact'
+            className={({ isActive }) =>
+              isActive ? "navActive" : "nav navMobile"
+            }
+          >
+            Contact
+          </NavLink>
         </div>
       </div>
     </nav>
