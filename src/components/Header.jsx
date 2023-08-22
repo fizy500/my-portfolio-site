@@ -36,6 +36,15 @@ function Header() {
               >
                 Contact
               </NavLink>
+
+              <NavLink
+                to='about'
+                className={({ isActive }) =>
+                  isActive ? "navActive" : "nav navDesktop"
+                }
+              >
+                About
+              </NavLink>
               {/* Add more menu items here */}
             </div>
           </div>
@@ -139,6 +148,14 @@ function Header() {
             }
           >
             Contact
+          </NavLink>
+          <NavLink
+            to='about'
+            className={({ isActive }) =>
+              isActive ? "navActive" : "nav navMobile"
+            }
+          >
+            About
           </NavLink>
         </div>
       </div>

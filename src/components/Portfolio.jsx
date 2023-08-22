@@ -61,8 +61,7 @@ function Portfolio() {
                   }  transition duration-1000`}
                   onClick={() => toggleTab(1)}
                 >
-                  Portfolio
-                </button>
+                 Articles                </button>
                 <button
                   className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
                   onClick={() => toggleTab(2)}

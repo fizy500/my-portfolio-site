@@ -2,16 +2,10 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
 import HomeLink from "./HomeLink";
-import ThankYou from "./ThankYou";
-import { SenderContext } from "../App";
 
 const emailText = "otuekongarthur@gmail.com";
 
-export default function Contact(handleStateChange) {
-  const sendTextToParent = () => {
-    handleStateChange()
-  };
-
+export default function Contact() {
   const [copyImage, SetCopyImage] = useState(false);
   const navigate = useNavigate();
   const form = useRef();
@@ -27,7 +21,6 @@ export default function Contact(handleStateChange) {
       )
       .then(
         () => {
-          // console.log(result.text);
           navigate("/thanks");
         },
         (error) => {
@@ -60,7 +53,7 @@ export default function Contact(handleStateChange) {
                 name='user_name'
                 placeholder='name'
                 className='rounded-sm px-2 py-3 border border-gray-400 outline-1 outline-gray-500'
-                onClick={(e) => sendTextToParent(e.target.value)}
+                // onClick={(e) => sendTextToParent(e.target.value)}
               />
 
               <input
