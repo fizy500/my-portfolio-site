@@ -12,6 +12,7 @@ import { ModalArticleContent } from "./ModalArticleContent";
 
 function Portfolio() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [articles, setArticles] = useState( );
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -27,8 +28,14 @@ function Portfolio() {
     setToggleState(index);
   };
 
+  // const getarticles = fetch("https://dev.to/api/articles/fizy_hector", {
+  //   headers: {
+  //     "api-key": import.meta.env.VITE_DEV_TO_API_KEY,
+  //   },
+  // }).then((res) => res.json().catch((err) => console.error(err)));
+
   return (
-    <section className=' bg-gray-950 py-16 '>
+    <section className='bg-gray-950 py-16 '>
       <div className='lg:flex  items-center max-width'>
         <motion.div
           className='w-1/2 flex items-center'
@@ -61,7 +68,8 @@ function Portfolio() {
                   }  transition duration-1000`}
                   onClick={() => toggleTab(1)}
                 >
-                 Articles                </button>
+                  Articles{" "}
+                </button>
                 <button
                   className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
                   onClick={() => toggleTab(2)}
@@ -77,7 +85,10 @@ function Portfolio() {
                       toggleState === 1 ? "content  active-content" : "content"
                     }
                   >
-                    <div className="h-[42rem] overflow-y-auto px-3" onClick={openModal}>
+                    <div
+                      className='h-[42rem] overflow-y-auto px-3'
+                      onClick={openModal}
+                    >
                       <ArticlesTemplate />
                       <ArticlesTemplate />
                     </div>

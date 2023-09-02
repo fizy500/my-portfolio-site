@@ -17,7 +17,7 @@ export default function About() {
                 I am a frontend web developer using HTML,CSS,Javascript,React to
                 bring User interfaces and functionalities to life. When not
                 coding,i prefer the solitude of my mind or listening to Fela
-                Kuti`s Afrobeat or moving my head to the exilaring rythm of
+                Kuti`s Afrobeat or moving my head to the exhilarating rythm of
                 electronic dance music (edm).
               </p>
             </div>
